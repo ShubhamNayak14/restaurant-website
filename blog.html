@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Spice Haven</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <style>
+    body.body-fixed { padding-top: 100px; background: #f8f8f8; font-family: 'Segoe UI', sans-serif; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .site-header .menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+    .site-header .menu a { color: #333; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: 0.3s; }
+    .site-header .menu a:hover, .site-header .menu .active-menu { background: #ff8243; color: #fff; }
+    .h2-title { font-weight: bold; color: #ff8243; }
+    .sec-btn {
+      background: #ff8243;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .sec-btn:hover { background: #ff5400; }
+    .blog-box {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .blog-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .blog-img {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+    .blog-text {
+      padding: 20px;
+    }
+    .blog-text .h4-title {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-text p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .blog-date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .site-footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="body-fixed">
+
+  <!-- Header -->
+  <header class="site-header py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html"><img src="logo.png" width="160" alt="Logo"></a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="blog.html" class="active-menu">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Blog Section -->
+  <div class="bg-light pt-5 pb-5">
+    <section class="blog-sec section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="h2-title">Latest Blog Posts</h1>
+          <div class="sec-title-shape mb-3">
+            <img src="assets/images/title-shape.svg" alt="">
+          </div>
+          <p>Discover our latest recipes and restaurant updates</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Blog Post 1 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/blog1.jpg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Sep 15, 2023</p>
+                <a href="#" class="h4-title">The Secret Behind Our Butter Chicken</a>
+                <p>Discover how we craft our signature butter chicken with rich flavors and spices.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/blog2.jpg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Oct 5, 2023</p>
+                <a href="#" class="h4-title">Vegetarian Delights: Indian Veg Dishes</a>
+                <p>Explore top vegetarian dishes that even meat lovers can't resist.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/blog3.jpg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Nov 20, 2023</p>
+                <a href="#" class="h4-title">Spice Guide: Indian Flavors 101</a>
+                <p>Learn about essential spices that define Indian cooking traditions.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/img1.jpeg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Dec 10, 2023</p>
+                <a href="#" class="h4-title">Perfect Naan Bread at Home</a>
+                <p>Easy tricks to make restaurant-style naan in your own kitchen.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 5 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/img2.jpeg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Jan 8, 2024</p>
+                <a href="#" class="h4-title">Indian Street Food Favorites</a>
+                <p>From chaat to samosas, see what makes Indian street food globally loved.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 6 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/img3.jpeg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Feb 2, 2024</p>
+                <a href="#" class="h4-title">Top 5 Indian Desserts</a>
+                <p>Explore gulab jamun, rasmalai, and more sugary delights you must try.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 7 -->
+          <div class="col-lg-4">
+            <div class="blog-box">
+              <div class="blog-img" style="background-image: url(assets/images/blog/img4.jpeg);"></div>
+              <div class="blog-text">
+                <p class="blog-date">Mar 15, 2024</p>
+                <a href="#" class="h4-title">How We Source Fresh Spices</a>
+                <p>Take a peek into how we select and source fresh, high-quality ingredients.</p>
+                <a href="#" class="sec-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Spice Haven. All rights reserved.</p>
+      <p>Designed by Spice Haven Web Team</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
