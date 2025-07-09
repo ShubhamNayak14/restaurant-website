@@ -1,218 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Spice Haven</title>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    /* Header Styles */
-     body.body-fixed { padding-top: 100px; background: #f8f8f8; font-family: 'Segoe UI', sans-serif; }
-    .site-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .site-header .menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
-    .site-header .menu a { color: #333; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: 0.3s; }
-    .site-header .menu a:hover, .site-header .menu .active-menu { background: #ff8243; color: #fff; }
-    .h2-title { font-weight: bold; color: #ff8243; }
-    .sec-btn {
-      background: #ff8243;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Spice Haven</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NJC3XWKX");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+      /* Header Styles */
+      body.body-fixed {
+        padding-top: 100px;
+        background: #f8f8f8;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .site-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+      .site-header .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+      .site-header .menu a {
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: 0.3s;
+      }
+      .site-header .menu a:hover,
+      .site-header .menu .active-menu {
+        background: #ff8243;
+        color: #fff;
+      }
+      .h2-title {
+        font-weight: bold;
+        color: #ff8243;
+      }
+      .sec-btn {
+        background: #ff8243;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-    a {
-      text-decoration: none !important;
-      outline: none !important;
-    }
+      a {
+        text-decoration: none !important;
+        outline: none !important;
+      }
 
-    /* Layout Padding Fix */
-    body.body-fixed {
-      padding-top: 110px;
-    }
+      /* Layout Padding Fix */
+      body.body-fixed {
+        padding-top: 110px;
+      }
 
-    .map-container {
-      margin: 40px auto 60px;
-      height: 300px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 20px 20px 40px #e6e6e6, -20px -20px 40px #ffffff;
-      max-width: 90%;
-    }
+      .map-container {
+        margin: 40px auto 60px;
+        height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 20px 20px 40px #e6e6e6, -20px -20px 40px #ffffff;
+        max-width: 90%;
+      }
 
-    .contact-section {
-      padding-top: 40px;
-      padding-bottom: 80px;
-    }
+      .contact-section {
+        padding-top: 40px;
+        padding-bottom: 80px;
+      }
 
-    .contact-info-box {
-      background: #f3f3f5;
-      padding: 40px;
-      border-radius: 30px;
-      box-shadow: 28px 28px 45px #e6e6e6, -28px -28px 45px #ffffff;
-      height: 100%;
-    }
+      .contact-info-box {
+        background: #f3f3f5;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 28px 28px 45px #e6e6e6, -28px -28px 45px #ffffff;
+        height: 100%;
+      }
 
-    .contact-info {
-      margin-bottom: 30px;
-    }
+      .contact-info {
+        margin-bottom: 30px;
+      }
 
-    .contact-info i {
-      color: #ff8243;
-      margin-right: 10px;
-      font-size: 24px;
-      vertical-align: middle;
-    }
+      .contact-info i {
+        color: #ff8243;
+        margin-right: 10px;
+        font-size: 24px;
+        vertical-align: middle;
+      }
 
-    .contact-form .form-group {
-      margin-bottom: 25px;
-    }
+      .contact-form .form-group {
+        margin-bottom: 25px;
+      }
 
-    .contact-form textarea {
-      min-height: 180px;
-    }
+      .contact-form textarea {
+        min-height: 180px;
+      }
 
-    .site-footer {
-      background: #111;
-      color: #ddd;
-      padding: 60px 0;
-      text-align: center;
-    }
+      .site-footer {
+        background: #111;
+        color: #ddd;
+        padding: 60px 0;
+        text-align: center;
+      }
 
-    .site-footer p {
-      margin: 0;
-    }
+      .site-footer p {
+        margin: 0;
+      }
 
-    /* Stylish Submit Button */
-    .sec-btn.primary-btn {
-      background: linear-gradient(135deg, #ff8243, #ff3c00);
-      color: white;
-      padding: 12px 30px;
-      font-size: 16px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(255, 100, 50, 0.3);
-    }
+      /* Stylish Submit Button */
+      .sec-btn.primary-btn {
+        background: linear-gradient(135deg, #ff8243, #ff3c00);
+        color: white;
+        padding: 12px 30px;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(255, 100, 50, 0.3);
+      }
 
-    .sec-btn.primary-btn:hover {
-      background: linear-gradient(135deg, #ff3c00, #ff8243);
-      box-shadow: 0 10px 25px rgba(255, 60, 0, 0.4);
-      transform: translateY(-2px);
-    }
-  </style>
-</head>
-<body class="body-fixed">
+      .sec-btn.primary-btn:hover {
+        background: linear-gradient(135deg, #ff3c00, #ff8243);
+        box-shadow: 0 10px 25px rgba(255, 60, 0, 0.4);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body class="body-fixed">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NJC3XWKX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <header class="site-header py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html"><img src="logo.png" width="160" alt="Logo" /></a>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active-menu">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-  <!-- Header -->
-   <!-- Header -->
-  <header class="site-header py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html"><img src="logo.png" width="160" alt="Logo"></a>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="blog.html" >Blog</a></li>
-        <li><a href="contact.html" class="active-menu">Contact</a></li>
-      </ul>
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715559516261!2d72.83212831537796!3d19.05272245794873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sTaj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
     </div>
-  </header>
 
-  <!-- Google Map -->
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715559516261!2d72.83212831537796!3d19.05272245794873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sTaj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </div>
-
-  <!-- Contact Section -->
-  <section class="contact-section section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center mb-5">
-          <h1 class="h2-title">Contact Us</h1>
-          <div class="sec-title-shape mb-4">
-            <img src="assets/images/title-shape.svg" alt="">
+    <!-- Contact Section -->
+    <section class="contact-section section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h1 class="h2-title">Contact Us</h1>
+            <div class="sec-title-shape mb-4">
+              <img src="assets/images/title-shape.svg" alt="" />
+            </div>
+            <p>
+              We'd love to hear from you! Reach out for reservations, questions,
+              or feedback.
+            </p>
           </div>
-          <p>We'd love to hear from you! Reach out for reservations, questions, or feedback.</p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <form
+              id="contactForm"
+              class="contact-form"
+              action="https://formsubmit.co/your@email.com"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form-input form-control"
+                  placeholder="Phone Number (Optional)"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  class="form-input form-control"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
+              <input type="hidden" name="_next" value="thankyou.html" />
+              <button type="submit" class="sec-btn primary-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-info-box">
+              <div class="contact-info">
+                <h3 class="h3-title">
+                  <i class="uil uil-map-marker"></i> Address
+                </h3>
+                <p>123 Spice Street, Mumbai, Maharashtra 400001</p>
+              </div>
+              <div class="contact-info">
+                <h3 class="h3-title"><i class="uil uil-phone"></i> Phone</h3>
+                <p><a href="tel:+918866998866">+91 8866998866</a></p>
+              </div>
+              <div class="contact-info">
+                <h3 class="h3-title"><i class="uil uil-envelope"></i> Email</h3>
+                <p>
+                  <a href="mailto:info@spicehaven.com">info@spicehaven.com</a>
+                </p>
+              </div>
+              <div class="contact-info">
+                <h3 class="h3-title"><i class="uil uil-clock"></i> Hours</h3>
+                <p>Monday–Sunday: 11:00 AM – 11:00 PM</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <form id="contactForm" class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
-            <div class="form-group">
-              <input type="text" name="name" class="form-input form-control" placeholder="Your Name" required />
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" class="form-input form-control" placeholder="Your Email" required />
-            </div>
-            <div class="form-group">
-              <input type="tel" name="phone" class="form-input form-control" placeholder="Phone Number (Optional)" />
-            </div>
-            <div class="form-group">
-              <textarea name="message" class="form-input form-control" placeholder="Your Message" required></textarea>
-            </div>
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="box" />
-            <input type="hidden" name="_next" value="thankyou.html" />
-            <button type="submit" class="sec-btn primary-btn">Send Message</button>
-          </form>
-        </div>
-        
-        <div class="col-lg-6">
-          <div class="contact-info-box">
-            <div class="contact-info">
-              <h3 class="h3-title"><i class="uil uil-map-marker"></i> Address</h3>
-              <p>123 Spice Street, Mumbai, Maharashtra 400001</p>
-            </div>
-            <div class="contact-info">
-              <h3 class="h3-title"><i class="uil uil-phone"></i> Phone</h3>
-              <p><a href="tel:+918866998866">+91 8866998866</a></p>
-            </div>
-            <div class="contact-info">
-              <h3 class="h3-title"><i class="uil uil-envelope"></i> Email</h3>
-              <p><a href="mailto:info@spicehaven.com">info@spicehaven.com</a></p>
-            </div>
-            <div class="contact-info">
-              <h3 class="h3-title"><i class="uil uil-clock"></i> Hours</h3>
-              <p>Monday–Sunday: 11:00 AM – 11:00 PM</p>
-            </div>
-          </div>
-        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Spice Haven. All rights reserved.</p>
+        <p>Designed by Spice Haven Web Team</p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Spice Haven. All rights reserved.</p>
-      <p>Designed by Spice Haven Web Team</p>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- JS -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
