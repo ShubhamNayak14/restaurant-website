@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Spice Haven</title>
+
+    <!-- Icons & CSS -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -24,10 +27,12 @@
       })(window, document, "script", "dataLayer", "GTM-NJC3XWKX");
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Inline page‑specific styles (kept from your original) -->
     <style>
-      /* Header Styles */
+      /* ——— Layout / Header / Footer styles ——— */
       body.body-fixed {
-        padding-top: 100px;
+        padding-top: 110px;
         background: #f8f8f8;
         font-family: "Segoe UI", sans-serif;
       }
@@ -36,71 +41,43 @@
         top: 0;
         width: 100%;
         z-index: 1000;
-        background: white;
+        background: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
       }
       .site-header .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: flex;
         gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
       .site-header .menu a {
-        color: #333;
-        text-decoration: none;
         padding: 0.5rem 1rem;
         border-radius: 25px;
+        color: #333;
+        text-decoration: none;
         transition: 0.3s;
       }
       .site-header .menu a:hover,
-      .site-header .menu .active-menu {
+      .active-menu {
         background: #ff8243;
         color: #fff;
       }
       .h2-title {
-        font-weight: bold;
+        font-weight: 700;
         color: #ff8243;
       }
-      .sec-btn {
-        background: #ff8243;
-        color: white;
-        padding: 8px 20px;
-        border-radius: 30px;
-        text-decoration: none;
-        display: inline-block;
-        transition: 0.3s;
-      }
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      a {
-        text-decoration: none !important;
-        outline: none !important;
-      }
-
-      /* Layout Padding Fix */
-      body.body-fixed {
-        padding-top: 110px;
-      }
-
       .map-container {
         margin: 40px auto 60px;
         height: 300px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 20px 20px 40px #e6e6e6, -20px -20px 40px #ffffff;
         max-width: 90%;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 20px 20px 40px #e6e6e6, -20px -20px 40px #ffffff;
       }
-
       .contact-section {
-        padding-top: 40px;
-        padding-bottom: 80px;
+        padding: 40px 0 80px;
       }
-
       .contact-info-box {
         background: #f3f3f5;
         padding: 40px;
@@ -108,54 +85,42 @@
         box-shadow: 28px 28px 45px #e6e6e6, -28px -28px 45px #ffffff;
         height: 100%;
       }
-
       .contact-info {
         margin-bottom: 30px;
       }
-
       .contact-info i {
         color: #ff8243;
         margin-right: 10px;
         font-size: 24px;
         vertical-align: middle;
       }
-
-      .contact-form .form-group {
+      .form-group {
         margin-bottom: 25px;
       }
-
       .contact-form textarea {
         min-height: 180px;
       }
-
-      .site-footer {
-        background: #111;
-        color: #ddd;
-        padding: 60px 0;
-        text-align: center;
-      }
-
-      .site-footer p {
-        margin: 0;
-      }
-
-      /* Stylish Submit Button */
       .sec-btn.primary-btn {
         background: linear-gradient(135deg, #ff8243, #ff3c00);
-        color: white;
+        color: #fff;
         padding: 12px 30px;
         font-size: 16px;
         border: none;
         border-radius: 50px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: 0.3s;
         box-shadow: 0 8px 20px rgba(255, 100, 50, 0.3);
       }
-
       .sec-btn.primary-btn:hover {
         background: linear-gradient(135deg, #ff3c00, #ff8243);
         box-shadow: 0 10px 25px rgba(255, 60, 0, 0.4);
         transform: translateY(-2px);
+      }
+      .site-footer {
+        background: #111;
+        color: #ddd;
+        text-align: center;
+        padding: 60px 0;
       }
     </style>
   </head>
@@ -169,7 +134,7 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Header -->
     <header class="site-header py-3">
       <div class="container d-flex justify-content-between align-items-center">
@@ -190,7 +155,7 @@
         width="100%"
         height="100%"
         style="border: 0"
-        allowfullscreen=""
+        allowfullscreen
         loading="lazy"
       >
       </iframe>
@@ -213,14 +178,15 @@
         </div>
 
         <div class="row align-items-center">
+          <!-- Contact form -->
           <div class="col-lg-6">
             <form
               id="contactForm"
-              class="contact-form"
-              action="https://formsubmit.co/your@email.com"
-              method="POST"
+              class="contact-form needs-validation"
+              novalidate
             >
               <div class="form-group">
+                <label>Full Name</label>
                 <input
                   type="text"
                   name="name"
@@ -228,8 +194,10 @@
                   placeholder="Your Name"
                   required
                 />
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
               <div class="form-group">
+                <label>Email</label>
                 <input
                   type="email"
                   name="email"
@@ -237,8 +205,10 @@
                   placeholder="Your Email"
                   required
                 />
+                <div class="invalid-feedback">Please enter a valid email.</div>
               </div>
               <div class="form-group">
+                <label>Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
@@ -247,22 +217,22 @@
                 />
               </div>
               <div class="form-group">
+                <label>Message</label>
                 <textarea
                   name="message"
                   class="form-input form-control"
                   placeholder="Your Message"
                   required
                 ></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
               </div>
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="box" />
-              <input type="hidden" name="_next" value="thankyou.html" />
               <button type="submit" class="sec-btn primary-btn">
                 Send Message
               </button>
             </form>
           </div>
 
+          <!-- Contact info -->
           <div class="col-lg-6">
             <div class="contact-info-box">
               <div class="contact-info">
@@ -273,7 +243,7 @@
               </div>
               <div class="contact-info">
                 <h3 class="h3-title"><i class="uil uil-phone"></i> Phone</h3>
-                <p><a href="tel:+918866998866">+91 8866998866</a></p>
+                <p><a href="tel:+918866998866">+91 8866998866</a></p>
               </div>
               <div class="contact-info">
                 <h3 class="h3-title"><i class="uil uil-envelope"></i> Email</h3>
@@ -283,7 +253,7 @@
               </div>
               <div class="contact-info">
                 <h3 class="h3-title"><i class="uil uil-clock"></i> Hours</h3>
-                <p>Monday–Sunday: 11:00 AM – 11:00 PM</p>
+                <p>Monday – Sunday: 11:00 AM – 11:00 PM</p>
               </div>
             </div>
           </div>
@@ -294,14 +264,69 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; 2025 Spice Haven. All rights reserved.</p>
+        <p>&copy; 2025 Spice Haven. All rights reserved.</p>
         <p>Designed by Spice Haven Web Team</p>
       </div>
     </footer>
 
-    <!-- JS -->
+    <!-- JS Libraries -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- EmailJS + Bootstrap validation + redirect -->
+    <script>
+      // ---------- Bootstrap validation ----------
+      (function () {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+
+      // ---------- EmailJS ----------
+      (function () {
+        emailjs.init({ publicKey: "gSrfdUiAC3H0q2i1M" });
+        let formData = document.getElementById("contactForm");
+        console.log(formData);
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          // If form is invalid, let Bootstrap stop submission
+          if (!this.checkValidity()) return;
+
+          event.preventDefault(); // Stop default submit
+
+          const btn = this.querySelector("button");
+          btn.disabled = true;
+          btn.textContent = "Sending…";
+
+          emailjs.sendForm("service_2how207", "template_ui1s60x", this).then(
+            () => {
+              window.location.href = "thankyou.html";
+            },
+            (error) => {
+              alert("Failed to send message. Please try again later.");
+              console.error("EmailJS error:", error);
+              btn.disabled = false;
+              btn.textContent = "Send Message";
+            }
+          );
+        });
+    </script>
   </body>
 </html>
