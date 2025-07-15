@@ -121,10 +121,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container d-flex justify-content-between align-items-center">
         <a href="index.html"><img src="logo.png" width="160" alt="Logo" /></a>
         <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html" class="active-menu">Menu</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" id="home">Home</a></li>
+          <li><a href="menu.html" id="menu" class="active-menu">Menu</a></li>
+          <li><a href="blog.html" id="blog">Blog</a></li>
+          <li><a href="contact.html" id="contact">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="text-end mb-4">
           <a
             href="assets/images/restaurant_menu.pdf"
-            download
+            download id="download_menu"
             class="pdf_download btn btn-warning rounded-pill px-4 py-2"
           >
             <i class="uil uil-import"></i> Download Menu (PDF)
